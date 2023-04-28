@@ -101,7 +101,7 @@ let billynageAnim = gsap
 /*bulle et billy
  ********************************************************/
 
-/*const bulle = document.querySelector(".bulle-poisson");
+const bulle = document.querySelector(".bulle-poisson");
 
 let bullePoisson = gsap
   .timeline()
@@ -109,7 +109,7 @@ let bullePoisson = gsap
   .from(".bulle-poisson", { x: "-30vw" })
 
   .to(".bulle-poisson", { x: "75vw", ease: "none", duration: "3" }, "+=1.25")
-  .to(".bulle-poisson", { opacity: 0 });*/
+  .to(".bulle-poisson", { opacity: 0 });
 /*lola
  ********************************************************/
 
@@ -144,3 +144,16 @@ let meduseAnim = gsap
   .from(".meduse", { y: "30vh" })
 
   .to(".meduse", { y: "-95vh", ease: "none", duration: "3" }, "+=1.25");
+
+  const flash= document.querySelector(".flash");
+
+  let flashAnim= gsap
+    .timeline()
+  
+    .from(".flash", { scale: "1" })
+  
+    .to(
+      ".flash",
+      { scale: "5", duration: "3",  },
+      "+=4"
+    );

@@ -262,8 +262,10 @@ p.texte.chapitre-2.p2 {
 .flash {
   position: absolute;
   z-index: 4;
-  left: -25vw;
-  top: 25vh;
+  left: 5vw;
+  bottom: 15vh;
+  width: 25vw;
+  
 }
 /*
 .tresor-coffre {
@@ -760,14 +762,14 @@ div.texte.chapitre-5.p1 {
   aspect-ratio: 1/1;
   width: 25vw;
   left: 35%;
-  background-image: url("../img/img_element_visuel/terre-spritesheet/spritesheet_terre.png");
+  background-image: url("../img/img_element_visuel/spritesheet_terre.png");
   background-size: 7200%;
   animation-play-state: paused;
   animation-duration: 12s;
   animation-name: terre;
   animation-iteration-count: infinite;
   animation-timing-function: steps(72);
-  z-index: 3;
+  z-index: 7;
 }
 @keyframes terre {
   from {
