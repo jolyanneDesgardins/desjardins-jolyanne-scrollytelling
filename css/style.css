@@ -1,0 +1,779 @@
+:root {
+  --bleu-foncer: #264653;
+  --bleu-claire: #005ae0;
+  --bleu-pale: #00b4dd;
+  --orange-pale: #ffa10a;
+  --orange-foncer: #ff600a;
+  --rose: #f50062;
+  --mauve: #53175e;
+  --mauve: #0ad88e;
+}
+/*Typo
+**********************************************/
+
+@font-face {
+  src: url("../font/LemonJuice.otf") format("opentype");
+  font-family: "Lemon-juice";
+}
+@font-face {
+  src: url("../font/Billy_2.0.ttf") format("truetype");
+  font-family: "billy";
+}
+/* Body 
+****************************************************************************/
+html {
+  overflow-x: hidden;
+  box-sizing: border-box;
+  position: relative;
+  left: 20px;
+}
+.allo {
+  height: 5000px;
+}
+.main {
+  max-width: 1920px;
+}
+/*Header
+**********************************************/
+header {
+  width: 100vw;
+  height: 100vh;
+  max-width: 1920px;
+  background-image: url("../img/img_arriere_plan/header.jpg");
+  aspect-ratio: 16/9;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  box-sizing: border-box;
+}
+
+h1 {
+  font-family: "billy";
+  width: 100%;
+  text-align: center;
+  margin: 0;
+  color: var(--bleu-pale);
+}
+
+.header_p {
+  align-self: flex-end;
+  text-align: center;
+  position: relative;
+  font-size: 15px;
+  top: 70%;
+  font-family: "Lemon-juice";
+}
+
+/* Section
+************************************************************************************/
+section {
+  width: 100%;
+
+  position: relative;
+}
+.arrow {
+  position: relative;
+  bottom: 0;
+  width: 42px;
+  display: inline-block;
+  left: 50%;
+}
+/* Chapitre 1
+*****************************************************************************************************/
+#chapitre-1 {
+  width: 100vw;
+  max-width: 1920px;
+  height: 100vh;
+  background-image: url("../img/img_arriere_plan/background-eau.jpg");
+
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  box-sizing: border-box;
+  overflow: hidden;
+  position: relative;
+}
+.billy-parle {
+  position: absolute;
+  width: 52vw;
+  left: 42%;
+  top: -10vh;
+}
+.bulle-billy {
+  position: relative;
+}
+p.texte.chapitre-1.p1 {
+  position: absolute;
+  font-size: 30px;
+  top: 10%;
+  left: 50vw;
+  width: 25vw;
+  font-family: "Lemon-juice";
+}
+p.texte.chapitre-1.p2 {
+  position: absolute;
+  font-size: 30px;
+  top: 10%;
+  width: 35vw;
+  font-family: "Lemon-juice";
+}
+/*Billy nage
+**********************************************************/
+.billy-nage {
+  position: absolute;
+  width: 55%;
+}
+/*Bulle reve 
+************************************************************************/
+.bulle-reve.no1 {
+  position: relative;
+  width: 17%;
+  left: 10%;
+  top: 8%;
+}
+.bulle-reve.no2 {
+  position: relative;
+  width: 12%;
+  top: 17%;
+  left: 0%;
+}
+
+/*Poisson Blue
+****************************************/
+.poisson {
+  position: absolute;
+  aspect-ratio: 3/4;
+  width: 25%;
+  left: 12%;
+  top: 4%;
+}
+
+.blue-corps {
+  position: relative;
+  z-index: 1;
+}
+.blue-nageoire {
+  z-index: 2;
+}
+/* Sable
+*************************************************************************************************/
+.sable {
+  width: 100vw;
+  position: absolute;
+  left: -12vw;
+  bottom: 19vh;
+}
+/* Posson Rouge
+*******************************************************************************************************/
+.poisson-rose {
+  position: absolute;
+  width: 15vw;
+}
+.poisson-rose.no1 {
+  left: 75vw;
+  top: 20vh;
+}
+.poisson-rose.no2 {
+  left: 65vw;
+  top: 25vh;
+}
+.poisson-rose.no3 {
+  left: 75vw;
+  top: 35vh;
+}
+/* Texte
+************************************************************************************************************/
+.texte {
+  position: absolute;
+}
+
+/* Transition Algue 
+************************************************************************************************************/
+transition-algue {
+  left: 5vh;
+  bottom: 0;
+}
+.sprite.transition-algue.no2 {
+  left: 18vw;
+  bottom: 0;
+}
+.sprite.transition-algue.no3 {
+  left: 29vw;
+  bottom: 0;
+}
+.sprite.transition-algue.no4 {
+  left: 50vw;
+}
+.sprite.transition-algue.no4 {
+  left: 60vw;
+  bottom: 0;
+}
+/* Chapitre 2
+*****************************************************************************************************/
+#chapitre-2 {
+  width: 100vw;
+  max-width: 1920px;
+  height: 100vh;
+  background-image: url(../img/img_arriere_plan/background-eau.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  box-sizing: border-box;
+  overflow: hidden;
+  position: relative;
+}
+p.texte.chapitre-2.p1 {
+  position: absolute;
+  font-size: 30px;
+  top: 10%;
+  left: 50vw;
+  width: 25vw;
+  font-family: "Lemon-juice";
+}
+p.texte.chapitre-2.p2 {
+  position: absolute;
+  font-size: 30px;
+  top: 10%;
+  width: 35vw;
+  font-family: "Lemon-juice";
+}
+/*Roche
+******************************************************/
+.roche {
+  position: absolute;
+}
+#chapitre-2 .billy-assit {
+  position: absolute;
+  width: 60vw;
+  bottom: -10vh;
+  left: 25vw;
+  z-index: 3;
+}
+.tresor-coffre {
+  position: absolute;
+  bottom: 10vh;
+  width: 45vh;
+}
+.coffre-haut {
+  position: absolute;
+  bottom: 20vh;
+  width: 35vh;
+}
+.flash {
+  position: absolute;
+  z-index: 4;
+  left: -25vw;
+  top: 25vh;
+}
+/*
+.tresor-coffre {
+  position: absolute;
+  width: 45vw;
+  bottom: 0;
+}
+.coffre-haut {
+  position: relative;
+  width: 35vw;
+  top: -20px;
+}*/
+.medaillon {
+  position: absolute;
+  width: 6vw;
+  left: 10vh;
+  bottom: -70vh;
+}
+
+/*.coffre {
+  position: absolute;
+}
+.tresor-coffre {
+  position: absolute;
+  width: 25%;
+  bottom: 0;
+  left: 6vw;
+  z-index: 3;
+}
+.coffre-haut {
+  position: absolute;
+  width: 20vw;
+  bottom: 0;
+  left: 6%;
+
+  z-index: 3;
+}
+.medaillon {
+  position: absolute;
+  width: 5vw;
+  bottom: 20%;
+  left: 12%;
+  z-index: 3;
+}*/
+/* Chapitre 3
+*****************************************************************************************************/
+#chapitre-3 {
+  width: 100vw;
+  height: 100vh;
+  background-image: url("../img/img_arriere_plan/background-eau.jpg");
+  max-width: 1920px;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  box-sizing: border-box;
+  display: block;
+  position: relative;
+  overflow: hidden;
+}
+img {
+  border: 1px solid red;
+}
+/*Lola
+*****************************************************/
+.lola {
+  position: absolute;
+  width: 50vw;
+  bottom: 0;
+}
+.lola-2 {
+  position: absolute;
+  width: 45vw;
+  left: 42%;
+  bottom: 2vmin;
+  z-index: 3;
+}
+#chapitre-3 .billy-assit {
+  position: absolute;
+  width: 60vw;
+  bottom: -10vh;
+  left: 25vw;
+  z-index: 3;
+}
+.main-tourner {
+  position: absolute;
+  width: 47vw;
+  z-index: 5;
+  bottom: 0;
+  right: 0;
+}
+.medaillon-2 {
+  position: absolute;
+  width: 30vw;
+  right: 22vw;
+  z-index: 6;
+}
+.main-zoom {
+  position: relative;
+  z-index: 6;
+}
+div.texte.chapitre-3.p1 {
+  position: absolute;
+  font-size: 30px;
+  top: 10%;
+  left: 50vw;
+  width: 25vw;
+  font-family: "Lemon-juice";
+}
+div.texte.chapitre-3.p2 {
+  position: absolute;
+  font-size: 30px;
+  top: 10%;
+  width: 35vw;
+  font-family: "Lemon-juice";
+}
+
+/* Chapitre 4
+*****************************************************************************************************/
+#chapitre-4 {
+  width: 100vw;
+  height: 100vh;
+  max-width: 1920px;
+  background-image: url("../img/img_arriere_plan/background-eau.jpg");
+
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  box-sizing: border-box;
+  display: block;
+  position: relative;
+}
+.billy-nage-chapitre4 {
+  position: absolute;
+  width: 52vw;
+}
+.lola-chapitre4 {
+  position: absolute;
+  width: 52vw;
+  top: 20%;
+}
+div.texte.chapitre-4.p1 {
+  position: absolute;
+  font-size: 30px;
+  top: 10%;
+  width: 35vw;
+  font-family: "Lemon-juice";
+}
+
+/*Poisson Rouge Groupe 
+********************************************************************************/
+.chapitre-4.poisson-rouge {
+  position: absolute;
+  width: 15vw;
+}
+.chapitre-4.poisson-rouge.no1 {
+  left: 75%;
+  top: 20%;
+}
+.chapitre-4.poisson-rouge.no2 {
+  left: 65%;
+  top: 25%;
+}
+.chapitre-4.poisson-rouge.no3 {
+  left: 75%;
+}
+.chapitre-4.poisson-rouge.no4 {
+  left: 52%;
+  top: 10%;
+}
+.chapitre-4.poisson-rouge.no5 {
+  left: 75%;
+  top: 35%;
+}
+.chapitre-4.poisson-rouge.no6 {
+  left: 55%;
+  top: 35%;
+}
+/* Chapitre 5
+*****************************************************************************************************/
+#chapitre-5 {
+  width: 100vw;
+  height: 100vh;
+  max-width: 1920px;
+  background-image: url("../img/img_arriere_plan/background-eau.jpg");
+
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  box-sizing: border-box;
+  display: block;
+  position: relative;
+  overflow: hidden;
+}
+
+.meduse {
+  position: absolute;
+  width: 100vw;
+  bottom: 0;
+}
+.grotte {
+  position: absolute;
+  width: 65vw;
+  aspect-ratio: 16/9;
+  bottom: 0;
+  left: 7vw;
+}
+.algue-arrire {
+  position: absolute;
+  width: 100vw;
+  bottom: 0vh;
+}
+.algue-avant {
+  position: absolute;
+  width: 100vw;
+  bottom: -5vh;
+}
+.poisson-d-parallax {
+  position: absolute;
+  width: 100vw;
+  top: 0vh;
+}
+.billy-grotte {
+  position: relative;
+  width: 58%;
+  z-index: 2;
+  bottom: 0;
+}
+.lola-grotte {
+  position: absolute;
+  width: 45vw;
+  z-index: 3;
+  bottom: 0;
+  left: 10vw;
+}
+.chapitre-5.poisson {
+  position: absolute;
+  aspect-ratio: 3/4;
+  width: 35vw;
+  left: 35vw;
+  bottom: 0;
+}
+
+.blue-corps {
+  position: relative;
+  z-index: 1;
+}
+.blue-nageoire {
+  z-index: 2;
+}
+.billy-medaillon {
+  position: absolute;
+  left: 25%;
+  bottom: 0;
+  z-index: 3;
+}
+.medaillon-4 {
+  position: relative;
+  width: 2vw;
+  top: 50%;
+  left: -20%;
+  z-index: 1;
+}
+div.texte.chapitre-5.p1 {
+  position: absolute;
+  font-size: 30px;
+  top: 10%;
+  width: 35vw;
+  font-family: "Lemon-juice";
+  z-index: 7;
+}
+/* Chapitre 6
+*****************************************************************************************************/
+#chapitre-6 {
+  width: 100vw;
+  height: 100vh;
+  max-width: 1920px;
+  background-image: url("../img/img_arriere_plan/background-espace.jpg");
+
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  box-sizing: border-box;
+  display: block;
+  position: relative;
+  overflow: hidden;
+}
+.etoile {
+  position: absolute;
+}
+.mercure {
+  position: absolute;
+  width: 12vw;
+  top: 50%;
+  left: 50%;
+}
+.soleil {
+  position: absolute;
+  width: 80%;
+  left: 50%;
+}
+.saturne {
+  position: absolute;
+  width: 25vw;
+}
+.billy-espace {
+  position: absolute;
+  width: 55vw;
+  top: 30%;
+  z-index: 5;
+}
+.lola-espace {
+  position: absolute;
+  width: 52vw;
+  left: 40%;
+  top: 30%;
+
+  z-index: 6;
+}
+.chapitre-6.poisson {
+  position: absolute;
+  aspect-ratio: 3/4;
+  width: 45%;
+  left: 35%;
+  top: 25%;
+  z-index: 7;
+}
+
+.blue-corps {
+  position: relative;
+  z-index: 1;
+}
+.blue-nageoire {
+  z-index: 2;
+}
+/*Media Query
+***********************************************************************************************/
+@media (max-width: 600px) {
+  h1 {
+    font-size: 20px;
+    width: 100%;
+    text-align: center;
+  }
+
+  .header_p {
+    align-self: flex-end;
+    text-align: center;
+    font-size: 11px;
+  }
+  .sable {
+    width: 100vw;
+    position: absolute;
+    left: -10vw;
+    bottom: -2vh;
+  }
+}
+
+@media (min-width: 600px) {
+  h1 {
+    font-size: 20px;
+    width: 100%;
+    text-align: center;
+  }
+
+  .header_p {
+    align-self: flex-end;
+    text-align: center;
+    font-size: 11px;
+  }
+  .sable {
+    width: 100vw;
+    position: absolute;
+    left: -2vw;
+    bottom: -2vh;
+  }
+}
+
+@media (min-width: 400px) {
+  h1 {
+    font-size: 20px;
+    width: 100%;
+    text-align: center;
+  }
+
+  .header_p {
+    align-self: flex-end;
+    text-align: center;
+    font-size: 11px;
+  }
+  .sable {
+    width: 100vw;
+    position: absolute;
+    left: -2vw;
+    bottom: -2vh;
+  }
+  .algue-transition {
+    bottom: -10vh;
+  }
+}
+
+@media (min-width: 1200px) {
+  h1 {
+    font-size: 67px;
+    width: 100%;
+    text-align: center;
+  }
+  .header_p {
+    align-self: flex-end;
+    text-align: center;
+    font-size: 25px;
+    top: 65%;
+  }
+  .sable {
+    width: 100vw;
+    position: absolute;
+    left: -2vw;
+    bottom: -2vh;
+  }
+}
+
+/* sprite Algue **
+*****************************************************************************************/
+
+.is-scrolling .sprite {
+  animation-play-state: running;
+}
+.sprite {
+  position: absolute;
+  aspect-ratio: 1/1;
+  width: 25vw;
+  bottom: 0vh;
+  background-image: url("../img/img_element_visuel/algue.png");
+  background-size: 6100%;
+  animation-name: algue;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+  animation-timing-function: steps(61);
+  animation-play-state: paused;
+  z-index: 3;
+}
+.sprite.no2 {
+  left: 5vw;
+}
+.sprite.no3 {
+  left: 50vw;
+}
+.sprite.no4 {
+  left: 75vw;
+}
+.sprite.no4 {
+  left: 75vw;
+}
+@keyframes algue {
+  from {
+    background-position: 0 0px;
+  }
+  to {
+    background-position: 6100% 0;
+  }
+}
+/* Planertte uranus
+*******************************************************************************/
+.is-scrolling .neptune {
+  animation-play-state: running;
+}
+.neptune {
+  position: absolute;
+  aspect-ratio: 1/1;
+  width: 35vw;
+  bottom: 0vh;
+  animation-name: neptune;
+  background-image: url("../img/img_element_visuel/neptune.png");
+  background-size: 7200%;
+  animation-play-state: paused;
+  animation-duration: 12s;
+  animation-iteration-count: infinite;
+  animation-timing-function: steps(72);
+  z-index: 3;
+}
+@keyframes neptune {
+  from {
+    background-position: 0 0px;
+  }
+  to {
+    background-position: 7200% 0;
+  }
+}
+/* Planertte uranus
+*******************************************************************************/
+.is-scrolling .terre {
+  animation-play-state: running;
+}
+.terre {
+  position: absolute;
+  aspect-ratio: 1/1;
+  width: 25vw;
+  left: 35%;
+  background-image: url("../img/img_element_visuel/terre-spritesheet/spritesheet_terre.png");
+  background-size: 7200%;
+  animation-play-state: paused;
+  animation-duration: 12s;
+  animation-name: terre;
+  animation-iteration-count: infinite;
+  animation-timing-function: steps(72);
+  z-index: 3;
+}
+@keyframes terre {
+  from {
+    background-position: 0 0px;
+  }
+  to {
+    background-position: 7200% 0;
+  }
+}
