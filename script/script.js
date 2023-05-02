@@ -26,6 +26,27 @@ window.addEventListener("scroll", (timer) => {
     body.classList.remove("is-scrolling");
   }, 1000);
 });
+/*bulle et billy
+ ********************************************************/
+
+const bulle = document.querySelector(".bulle-poisson");
+
+let bullePoisson = gsap
+  .timeline()
+
+  .from(".bulle-poisson", { x: "-100vw" })
+
+  .to(".bulle-poisson", { x: "75vw", ease: "none", duration: "5" }, "+=1.25")
+  .to(".bulle-poisson", { opacity: 0 })
+  .to(".texte.chapitre-1.p1", { opacity: 0 });
+
+const parle = document.querySelector(".billy-parle");
+
+let billyparle = gsap
+  .timeline()
+
+  .from(".billy-parle", { opacity: 0 }, "+=8")
+  .to(".billy-parle", { opacity: 100 });
 
 /* Animation Poisson Blue
  *******************************************************************************************************/
@@ -55,7 +76,7 @@ const Poisson = document.querySelector(".poisson-rose");
 let PoissonAnim = gsap
   .timeline()
 
-  .from(".poisson-rose", { x: "30vw" })
+  .from(".poisson-rose", { x: "30vw" }, "8")
 
   .to(".poisson-rose", { x: "-95vw", ease: "none" }, "+=1.25");
 
@@ -63,14 +84,14 @@ PoissonAnim.play();
 
 /* Algue transition
  ***************************************************************************************/
-const transition = document.querySelector(".transition-algue");
+/*const transition = document.querySelector(".transition-algue");
 
 let transitionAnim = gsap
   .timeline({})
 
   .to(".transition-algue", { scale: 4, duration: 4 }, "+=3")
 
-  .to("transition-algue", { scale: 4 });
+  .to("transition-algue", { scale: 4 });*/
 /*Poisson Rouge
  ********************************************************/
 
@@ -98,18 +119,7 @@ let billynageAnim = gsap
     { x: "95vw", ease: "none", duration: "3" },
     "+=1.25"
   );
-/*bulle et billy
- ********************************************************/
 
-const bulle = document.querySelector(".bulle-poisson");
-
-let bullePoisson = gsap
-  .timeline()
-
-  .from(".bulle-poisson", { x: "-30vw" })
-
-  .to(".bulle-poisson", { x: "75vw", ease: "none", duration: "3" }, "+=1.25")
-  .to(".bulle-poisson", { opacity: 0 });
 /*lola
  ********************************************************/
 
@@ -145,15 +155,12 @@ let meduseAnim = gsap
 
   .to(".meduse", { y: "-95vh", ease: "none", duration: "3" }, "+=1.25");
 
-  const flash= document.querySelector(".flash");
+const flash = document.querySelector(".flash");
 
-  let flashAnim= gsap
-    .timeline()
-  
-    .from(".flash", { scale: "1" })
-  
-    .to(
-      ".flash",
-      { scale: "5", duration: "3",  },
-      "+=4"
-    );
+let flashAnim = gsap
+  .timeline()
+
+  .from(".flash", { scale: "0" }, "+=10")
+
+  .to(".flash", { scale: "5", duration: "3" }, "+=4")
+  .to(".flash", { scale: "0" });
