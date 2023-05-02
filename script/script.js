@@ -1,3 +1,4 @@
+gsap.registerPlugin(ScrollTrigger);
 /* Animation Flèche
  **********************************************************************************************/
 
@@ -28,12 +29,30 @@ window.addEventListener("scroll", (timer) => {
 });
 /*bulle et billy
  ********************************************************/
-
+gsap.to("#chapitre-1", {
+  width: "100%",
+  scrollTrigger: {
+    pin: true,
+    scrub: true,
+    markers: true,
+    start: "center bottom",
+    end: "top top",
+    trigger: ".bulle-poisson",
+  },
+});
 const bulle = document.querySelector(".bulle-poisson");
 
 let bullePoisson = gsap
   .timeline()
-
+  gsap.from('.bulle-poisson', { 
+    x: '100%',
+    scrollTrigger: {
+      scrub: 1,
+      markers: true,
+      start: 'top 75%',
+      end: 'bottom 25%',
+      trigger: '#chapitre-1',
+    }
   .from(".bulle-poisson", { x: "-100vw" })
 
   .to(".bulle-poisson", { x: "75vw", ease: "none", duration: "5" }, "+=1.25")
