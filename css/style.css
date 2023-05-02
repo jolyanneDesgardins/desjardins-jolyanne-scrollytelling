@@ -25,7 +25,6 @@ html {
   overflow-x: hidden;
   box-sizing: border-box;
   position: relative;
-  left: 20px;
 }
 .allo {
   height: 5000px;
@@ -321,11 +320,7 @@ img {
 }
 /*Lola
 *****************************************************/
-.lola {
-  position: absolute;
-  width: 50vw;
-  bottom: 0;
-}
+
 .lola-2 {
   position: absolute;
   width: 45vw;
@@ -340,23 +335,22 @@ img {
   left: 25vw;
   z-index: 3;
 }
-.main-tourner {
+.main-zoom {
+  position: relative;
+  z-index: 12;
+}
+.main {
   position: absolute;
   width: 47vw;
-  z-index: 5;
-  bottom: 0;
-  right: 0;
+  z-index: 10;
 }
 .medaillon-2 {
   position: absolute;
   width: 30vw;
-  right: 22vw;
-  z-index: 6;
+  left: 20vw;
+  z-index: 11;
 }
-.main-zoom {
-  position: relative;
-  z-index: 6;
-}
+
 div.texte.chapitre-3.p1 {
   position: absolute;
   font-size: 30px;
