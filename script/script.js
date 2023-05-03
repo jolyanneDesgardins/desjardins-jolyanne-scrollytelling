@@ -72,24 +72,26 @@ let nageoireAnim = gsap.to(".blue-nageoire", {
 /* Poisson rouge
  *****************************************************************************************************************************/
 const Poisson = document.querySelector(".poisson-rose");
-gsap.to('.poisson-rose', { 
-  x: "-95vw", ease: "none", 
+gsap .timeline()
+.from('.poisson-rose', { 
+  x: "-95vw", 
     scrollTrigger: {
-      scrub: 0.5,
+      scrub: true,
+      pin:true,
       markers: true,
-         start: '50% 50%',
-      end: '50% top',
-      trigger: '.body',
+         start: 'center 50%',
+      end: 'center top',
+      trigger: '#chapitre-1',
     }
   })
-let PoissonAnim = gsap
+/*let PoissonAnim = gsap
   .timeline()
 
   .from(".poisson-rose", { x: "30vw" }, "8")
 
   .to(".poisson-rose", { x: "-95vw", ease: "none" }, "+=1.25");
 
-PoissonAnim.play();
+PoissonAnim.play();*/
 
 /* Algue transition
  ***************************************************************************************/
