@@ -141,7 +141,7 @@ let mainZoom = gsap
 
   .to(
     ".main-zoom",
-    { scale: "5", duration: "3", y: "-105vh", x: "50vw" },
+    { scale: "3", duration: "3", y: "-105vh", x: "50vw" },
     "+=4"
   );
 /*meduse ******/
@@ -164,3 +164,20 @@ let flashAnim = gsap
 
   .to(".flash", { scale: "5", duration: "3" }, "+=4")
   .to(".flash", { scale: "0" });
+
+ /* let coffre = gsap
+  .timeline()
+  .from(".coffre", {opacity:0},"+=5")
+  .to(".coffre", {opacity:100})
+*/
+let coffreHaut= gsap
+.fromTo("#chapitre-3", {
+ y:"50vh",
+  strollTrigger:{
+    markers:true,
+    start: '50% 50%',
+    end: '50% top',
+    trigger: '.coffre-haut',
+  }
+
+})

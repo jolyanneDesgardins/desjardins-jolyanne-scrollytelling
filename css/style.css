@@ -67,7 +67,7 @@ h1 {
 ************************************************************************************/
 section {
   width: 100%;
-
+ border:red solid 1px;
   position: relative;
 }
 .arrow {
@@ -96,7 +96,7 @@ section {
   position: absolute;
   width: 52vw;
   left: 42%;
-  top: -10vh;
+  top: 0vh;
 }
 .bulle-billy {
   position: relative;
@@ -109,13 +109,22 @@ p.texte.chapitre-1.p1 {
   width: 75vw;
   font-family: "Lemon-juice";
 }
+p.texte.chapitre-1.p2 {
+  position: absolute;
+  font-size: 40px;
+  top: -3%;
+  left: 15vw;
+  width: 75vw;
+  font-family: "Lemon-juice";
+}
+
 
 /*Billy nage
 **********************************************************/
 .billy-nage {
   position: absolute;
   width: 55%;
-  top: 5%;
+  top: 20%;
 }
 /*Bulle reve 
 ************************************************************************/
@@ -128,7 +137,7 @@ p.texte.chapitre-1.p1 {
 .bulle-reve.no2 {
   position: relative;
   width: 12%;
-  top: 17%;
+  top: 8vh;
   left: 0%;
 }
 
@@ -265,14 +274,16 @@ p.texte.chapitre-2.p2 {
 .coffre-haut {
   position: relative;
   width: 36vw;
-  top: 54vh;
+  top: 59vh;
   z-index: 5;
 }
 .medaillon {
-  position: absolute;
+  position: relative;
   width: 6vw;
-  left: 10vw;
-  bottom: -70vh;
+  top:52vh;
+  z-index: 4;
+  left: -20vw;
+
 }
 
 /*.coffre {
