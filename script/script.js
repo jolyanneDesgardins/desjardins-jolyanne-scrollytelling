@@ -33,8 +33,15 @@ window.addEventListener("scroll", (timer) => {
 const bulle = document.querySelector(".bulle-poisson");
 
 let bullePoisson = gsap
-  .timeline()
-  .from(".bulle-poisson", { x: "-100vw" })
+  .timeline( { scrollTrigger: {
+    scrub: true,
+  pin:true,
+    markers: true,
+       start: 'center bottom',
+    end: 'center top',
+    trigger: '#chapitre-1',
+  }})
+  .from(".bulle-poisson", { x: "-100vw" },"+=5")
 
   .to(".bulle-poisson", { x: "75vw", ease: "none", duration: "5" }, "+=1.25")
   .to(".bulle-poisson", { opacity: 0 })
@@ -79,7 +86,7 @@ gsap .timeline()
       scrub: true,
       pin:true,
       markers: true,
-         start: 'center 50%',
+         start: 'center bottom',
       end: 'center top',
       trigger: '#chapitre-1',
     }
@@ -182,13 +189,15 @@ let flashAnim = gsap
   .to(".coffre", {opacity:100})
 */
 let coffreHaut= gsap
-.fromTo("#chapitre-3", {
- y:"50vh",
-  strollTrigger:{
-    markers:true,
-    start: '50% 50%',
-    end: '50% top',
-    trigger: '.coffre-haut',
-  }
 
-})
+  .timeline( { scrollTrigger: {
+    scrub: true,
+  
+    markers: true,
+       start: 'center 50%',
+    end: 'center top',
+    trigger: '#chapitre-3',
+  }})
+  .from (".coffre-haut",{ y: "-10vh" })
+  .to(".coffre-haut",{ y: "10vh" })
+
