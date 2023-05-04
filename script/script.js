@@ -35,11 +35,10 @@ const bulle = document.querySelector(".bulle-poisson");
 let bullePoisson = gsap
   .timeline( { scrollTrigger: {
     scrub: true,
-  pin:true,
-    markers: true,
+  
        start: 'center bottom',
     end: 'center top',
-    trigger: '#chapitre-1',
+    trigger: '.bulle-poisson',
   }})
   .from(".bulle-poisson", { x: "-100vw" },"+=5")
 
@@ -84,8 +83,9 @@ gsap .timeline()
   x: "-95vw", 
     scrollTrigger: {
       scrub: true,
-      pin:true,
-      markers: true,
+     
+  
+     
          start: 'center bottom',
       end: 'center top',
       trigger: '#chapitre-1',
@@ -190,14 +190,13 @@ let flashAnim = gsap
 */
 let coffreHaut= gsap
 
-  .timeline( { scrollTrigger: {
-    scrub: true,
-  
-    markers: true,
-       start: 'center 50%',
-    end: 'center top',
-    trigger: '#chapitre-3',
-  }})
-  .from (".coffre-haut",{ y: "-10vh" })
-  .to(".coffre-haut",{ y: "10vh" })
+.timeline( { scrollTrigger: {
+  scrub: true,
+  markers: true,
+     start: 'center center',
+  end: 'center 50%',
+  trigger: '#chapitre-2',
+}})
+  .from (".coffre-haut",{ y: "-5vh" })
+  .to(".coffre-haut",{ y: "-20vh" })
 
