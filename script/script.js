@@ -136,6 +136,7 @@ const nage = document.querySelector(".billy-nage-chapitre4");
 let billynageAnim = gsap
 .timeline( { scrollTrigger: {
   scrub: true,
+
   markers: true,
      start: 'center center',
   end: 'center 20%',
@@ -159,6 +160,7 @@ let lolaNage = gsap
 .timeline( { scrollTrigger: {
   scrub: true,
   markers: true,
+
      start: 'center center',
   end: 'center 20%',
   trigger: '#chapitre-4',
@@ -174,6 +176,7 @@ let mainZoom = gsap
 .timeline( { scrollTrigger: {
   scrub: true,
   markers: true,
+ 
      start: 'center center',
   end: 'center 20%',
   trigger: '#chapitre-3',
@@ -224,6 +227,6 @@ let coffreHaut= gsap
   trigger: '#chapitre-2',
 }})
   .from (".coffre-haut",{ y: "-5vh" })
-  .to(".medaillon" , { zIindex:4})
-  .to(".coffre-haut",{ y: "-20vh" })
+  .to(".medaillon" , { zIndex:5})
+  .to(".coffre-haut",{ y: "-25vh" })
 
