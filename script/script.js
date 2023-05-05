@@ -194,7 +194,7 @@ let coffreHaut= gsap
   scrub: true,
   markers: true,
      start: 'center center',
-  end: 'center 50%',
+  end: 'center 20%',
   trigger: '#chapitre-2',
 }})
   .from (".coffre-haut",{ y: "-5vh" })
