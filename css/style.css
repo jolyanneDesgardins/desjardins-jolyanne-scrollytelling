@@ -280,7 +280,7 @@ p.texte.chapitre-2.p2 {
 .medaillon {
   position: relative;
   width: 6vw;
-  top:52vh;
+  top:45vh;
   z-index: 4;
   left: -20vw;
 
@@ -363,11 +363,11 @@ img {
 }
 
 div.texte.chapitre-3.p1 {
+
   position: absolute;
   font-size: 30px;
   top: 10%;
-  left: 50vw;
-  width: 25vw;
+  width: 35vw;
   font-family: "Lemon-juice";
 }
 div.texte.chapitre-3.p2 {
@@ -375,6 +375,7 @@ div.texte.chapitre-3.p2 {
   font-size: 30px;
   top: 10%;
   width: 35vw;
+  opacity: 0;
   font-family: "Lemon-juice";
 }
 

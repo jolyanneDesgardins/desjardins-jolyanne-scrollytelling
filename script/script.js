@@ -35,10 +35,10 @@ const bulle = document.querySelector(".bulle-poisson");
 let bullePoisson = gsap
   .timeline( { scrollTrigger: {
     scrub: true,
-  
+
        start: 'center bottom',
     end: 'center top',
-    trigger: '.bulle-poisson',
+    trigger: '#chapitre-1',
   }})
   .from(".bulle-poisson", { x: "-100vw" },"+=5")
 
@@ -77,7 +77,7 @@ let nageoireAnim = gsap.to(".blue-nageoire", {
 
 /* Poisson rouge
  *****************************************************************************************************************************/
-const Poisson = document.querySelector(".poisson-rose");
+/*const Poisson = document.querySelector(".poisson-rose");
 gsap .timeline()
 .from('.poisson-rose', { 
   x: "-95vw", 
@@ -90,15 +90,21 @@ gsap .timeline()
       end: 'center top',
       trigger: '#chapitre-1',
     }
-  })
-/*let PoissonAnim = gsap
-  .timeline()
+  })*/
+let PoissonAnim = gsap
+.timeline( { scrollTrigger: {
+  scrub: true,
+
+     start: 'center bottom',
+  end: 'center top',
+  trigger: '#chapitre-1',
+}})
 
   .from(".poisson-rose", { x: "30vw" }, "8")
 
   .to(".poisson-rose", { x: "-95vw", ease: "none" }, "+=1.25");
 
-PoissonAnim.play();*/
+PoissonAnim.play();
 
 /* Algue transition
  ***************************************************************************************/
@@ -128,7 +134,13 @@ PoissonRougeAnim.play();
 const nage = document.querySelector(".billy-nage-chapitre4");
 
 let billynageAnim = gsap
-  .timeline()
+.timeline( { scrollTrigger: {
+  scrub: true,
+  markers: true,
+     start: 'center center',
+  end: 'center 20%',
+  trigger: '#chapitre-4',
+}})
 
   .from(".billy-nage-chapitre4", { x: "-30vw" })
 
@@ -144,24 +156,38 @@ let billynageAnim = gsap
 const lola = document.querySelector(".lola-chapitre4");
 
 let lolaNage = gsap
-  .timeline()
+.timeline( { scrollTrigger: {
+  scrub: true,
+  markers: true,
+     start: 'center center',
+  end: 'center 20%',
+  trigger: '#chapitre-4',
+}})
 
   .from(".lola-chapitre4", { x: "-30vw" })
 
   .to(".lola-chapitre4", { x: "95vw", ease: "none", duration: "3" }, "+=1.25");
-
+ 
 const main = document.querySelector(".main-zoom");
 
 let mainZoom = gsap
-  .timeline()
+.timeline( { scrollTrigger: {
+  scrub: true,
+  markers: true,
+     start: 'center center',
+  end: 'center 20%',
+  trigger: '#chapitre-3',
+}})
 
-  .from(".main-zoom", { scale: "1" })
-
+  .from(".main-zoom", { opacity:0 , scale: "1" })
+  
   .to(
     ".main-zoom",
     { scale: "3", duration: "3", y: "-105vh", x: "50vw" },
     "+=4"
-  );
+  )
+  .to(".main-zoom", { opacity:0 , scale: "1" })
+  .to(".texte.chapitre-3.p2", { opacity: 100 });
 /*meduse ******/
 
 const meduse = document.querySelector(".lola-chapitre4");
@@ -198,5 +224,6 @@ let coffreHaut= gsap
   trigger: '#chapitre-2',
 }})
   .from (".coffre-haut",{ y: "-5vh" })
+  .to(".medaillon" , { zIindex:4})
   .to(".coffre-haut",{ y: "-20vh" })
 
