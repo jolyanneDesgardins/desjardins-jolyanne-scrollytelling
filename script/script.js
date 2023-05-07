@@ -323,7 +323,7 @@ gsap.to("#parallax-bg-3", {
   ease: "none",
 });*/
 gsap.from(
-  "#star",
+  "#halo",
 
   {
     drawSVG: "0 0",
