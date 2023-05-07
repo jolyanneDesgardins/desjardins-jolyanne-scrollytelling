@@ -1,6 +1,6 @@
 gsap.registerPlugin(ScrollTrigger);
 gsap.registerPlugin(DrawSVGPlugin);
-gsap.registerPlugin(MotionPathPlugin);
+
 /* Animation Flèche
  **********************************************************************************************/
 
@@ -322,8 +322,9 @@ gsap.to("#parallax-bg-3", {
   y: hauteurTotaleDuDocument * -0.75,
   ease: "none",
 });*/
+
 gsap.from(
-  "#halo",
+  "#star",
 
   {
     drawSVG: "0 0",
