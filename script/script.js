@@ -1,4 +1,6 @@
 gsap.registerPlugin(ScrollTrigger);
+gsap.registerPlugin(DrawSVGPlugin);
+gsap.registerPlugin(MotionPathPlugin);
 /* Animation Flèche
  **********************************************************************************************/
 
@@ -33,26 +35,65 @@ window.addEventListener("scroll", (timer) => {
 const bulle = document.querySelector(".bulle-poisson");
 
 let bullePoisson = gsap
-  .timeline( { scrollTrigger: {
-    scrub: true,
-
-       start: 'center bottom',
-    end: 'center top',
-    trigger: '#chapitre-1',
-  }})
-  .from(".bulle-poisson", { x: "-100vw" },"+=5")
+  .timeline({
+    scrollTrigger: {
+      scrub: true,
+      pin: true,
+      start: "center center",
+      end: "center top",
+      trigger: "#chapitre-1",
+    },
+  })
+  .from(".bulle-poisson", { x: "-100vw" }, "+=5")
 
   .to(".bulle-poisson", { x: "75vw", ease: "none", duration: "5" }, "+=1.25")
   .to(".bulle-poisson", { opacity: 0 })
-  .to(".texte.chapitre-1.p1", { opacity: 0 });
+  .to(".texte.chapitre-1.p1", { opacity: 0 })
 
+  .from(".billy-parle", { opacity: 0 }, "+=8")
+  .to(".billy-parle", { opacity: 100 })
+  .from(".poisson-rose", { x: "30vw" })
+
+  .to(".poisson-rose", { x: "-95vw" });
+/* Poisson rouge
+ *****************************************************************************************************************************/
+/*const Poisson = document.querySelector(".poisson-rose");
+gsap .timeline()
+.from('.poisson-rose', { 
+  x: "-95vw", 
+    scrollTrigger: {
+      scrub: true,
+     
+  
+     
+         start: 'center bottom',
+      end: 'center top',
+      trigger: '#chapitre-1',
+    }
+  })*/
+/*let PoissonAnim = gsap
+  .timeline({
+    scrollTrigger: {
+      scrub: true,
+
+      start: "center bottom",
+      end: "center top",
+      trigger: "#chapitre-1",
+    },
+  })
+
+  .from(".poisson-rose", { x: "30vw" }, "8")
+
+  .to(".poisson-rose", { x: "-95vw", ease: "none" }, "+=1.25");
+
+PoissonAnim.play();
 const parle = document.querySelector(".billy-parle");
 
 let billyparle = gsap
   .timeline()
 
   .from(".billy-parle", { opacity: 0 }, "+=8")
-  .to(".billy-parle", { opacity: 100 });
+  .to(".billy-parle", { opacity: 100 });*/
 
 /* Animation Poisson Blue
  *******************************************************************************************************/
@@ -74,37 +115,6 @@ let nageoireAnim = gsap.to(".blue-nageoire", {
   ease: "none",
   duration: 1.5,
 });
-
-/* Poisson rouge
- *****************************************************************************************************************************/
-/*const Poisson = document.querySelector(".poisson-rose");
-gsap .timeline()
-.from('.poisson-rose', { 
-  x: "-95vw", 
-    scrollTrigger: {
-      scrub: true,
-     
-  
-     
-         start: 'center bottom',
-      end: 'center top',
-      trigger: '#chapitre-1',
-    }
-  })*/
-let PoissonAnim = gsap
-.timeline( { scrollTrigger: {
-  scrub: true,
-
-     start: 'center bottom',
-  end: 'center top',
-  trigger: '#chapitre-1',
-}})
-
-  .from(".poisson-rose", { x: "30vw" }, "8")
-
-  .to(".poisson-rose", { x: "-95vw", ease: "none" }, "+=1.25");
-
-PoissonAnim.play();
 
 /* Algue transition
  ***************************************************************************************/
@@ -134,14 +144,16 @@ PoissonRougeAnim.play();
 const nage = document.querySelector(".billy-nage-chapitre4");
 
 let billynageAnim = gsap
-.timeline( { scrollTrigger: {
-  scrub: true,
+  .timeline({
+    scrollTrigger: {
+      scrub: true,
 
-  markers: true,
-     start: 'center center',
-  end: 'center 20%',
-  trigger: '#chapitre-4',
-}})
+      markers: true,
+      start: "center center",
+      end: "center 20%",
+      trigger: "#chapitre-4",
+    },
+  })
 
   .from(".billy-nage-chapitre4", { x: "-30vw" })
 
@@ -157,39 +169,43 @@ let billynageAnim = gsap
 const lola = document.querySelector(".lola-chapitre4");
 
 let lolaNage = gsap
-.timeline( { scrollTrigger: {
-  scrub: true,
-  markers: true,
+  .timeline({
+    scrollTrigger: {
+      scrub: true,
+      markers: true,
 
-     start: 'center center',
-  end: 'center 20%',
-  trigger: '#chapitre-4',
-}})
+      start: "center center",
+      end: "center 20%",
+      trigger: "#chapitre-4",
+    },
+  })
 
   .from(".lola-chapitre4", { x: "-30vw" })
 
   .to(".lola-chapitre4", { x: "95vw", ease: "none", duration: "3" }, "+=1.25");
- 
+
 const main = document.querySelector(".main-zoom");
 
 let mainZoom = gsap
-.timeline( { scrollTrigger: {
-  scrub: true,
-  markers: true,
- 
-     start: 'center center',
-  end: 'center 20%',
-  trigger: '#chapitre-3',
-}})
+  .timeline({
+    scrollTrigger: {
+      scrub: true,
+      markers: true,
+      pin: true,
+      start: "center center",
+      end: "center 20%",
+      trigger: "#chapitre-3",
+    },
+  })
 
-  .from(".main-zoom", { opacity:0 , scale: "1" })
-  
+  .from(".main-zoom", { opacity: 0, scale: "1" })
+
   .to(
     ".main-zoom",
     { scale: "3", duration: "3", y: "-105vh", x: "50vw" },
     "+=4"
   )
-  .to(".main-zoom", { opacity:0 , scale: "1" })
+  .to(".main-zoom", { opacity: 0, scale: "1" })
   .to(".texte.chapitre-3.p2", { opacity: 100 });
 /*meduse ******/
 
@@ -205,28 +221,112 @@ let meduseAnim = gsap
 const flash = document.querySelector(".flash");
 
 let flashAnim = gsap
-  .timeline()
-
+  .timeline({
+    scrollTrigger: {
+      scrub: true,
+      pin: true,
+      markers: true,
+      start: "center center",
+      end: "center 20%",
+      trigger: "#chapitre-2",
+    },
+  })
+  .from(".coffre", { opacity: 0 })
   .from(".flash", { scale: "0" }, "+=10")
 
   .to(".flash", { scale: "5", duration: "3" }, "+=4")
-  .to(".flash", { scale: "0" });
-
- /* let coffre = gsap
+  .to(".flash", { scale: "0" })
+  .to(".coffre", { opacity: 100 })
+  .from(".coffre-haut", { y: "-5vh" })
+  .to(".medaillon", { zIndex: 5 })
+  .to(".coffre-haut", { y: "-25vh" });
+/* let coffre = gsap
   .timeline()
   .from(".coffre", {opacity:0},"+=5")
   .to(".coffre", {opacity:100})
 */
-let coffreHaut= gsap
+/*let coffreHaut = gsap
 
-.timeline( { scrollTrigger: {
-  scrub: true,
-  markers: true,
-     start: 'center center',
-  end: 'center 20%',
-  trigger: '#chapitre-2',
-}})
-  .from (".coffre-haut",{ y: "-5vh" })
-  .to(".medaillon" , { zIndex:5})
-  .to(".coffre-haut",{ y: "-25vh" })
+  .timeline({
+    scrollTrigger: {
+      scrub: true,
+      pin: true,
+      markers: true,
+      start: "center center",
+      end: "center 20%",
+      trigger: "#chapitre-2",
+    },
+  })
+  .from(".coffre-haut", { y: "-5vh" })
+  .to(".medaillon", { zIndex: 5 })
+  .to(".coffre-haut", { y: "-25vh" });*/
 
+let largeurTotaleDuDocument = document.body.scrollWidth;
+gsap.to(".loin", {
+  scrollTrigger: {
+    scrub: true,
+    markers: true,
+    trigger: "#chapitre-4",
+  },
+
+  x: largeurTotaleDuDocument * -0.25,
+  ease: "none",
+});
+
+gsap.to(".moyen", {
+  scrollTrigger: {
+    scrub: true,
+    markers: true,
+
+    trigger: "#chapitre-4",
+  },
+  x: largeurTotaleDuDocument * 0.4,
+  ease: "none",
+});
+
+gsap.to(".proche", {
+  scrollTrigger: {
+    scrub: true,
+    markers: true,
+    pin: true,
+    trigger: "#chapitre-4",
+  },
+  x: "25vw",
+  x: largeurTotaleDuDocument * 0.75,
+  ease: "none",
+});
+/*
+gsap.to("#parallax-bg-1", {
+  scrollTrigger: {
+    scrub: true,
+    markers: true,
+  },
+  y: hauteurTotaleDuDocument * -0.25,
+  ease: "none",
+});
+
+gsap.to("#parallax-bg-2", {
+  scrollTrigger: {
+    scrub: true,
+    markers: true,
+  },
+  y: hauteurTotaleDuDocument * -0.4,
+  ease: "none",
+});
+
+gsap.to("#parallax-bg-3", {
+  scrollTrigger: {
+    scrub: true,
+    markers: true,
+  },
+  y: hauteurTotaleDuDocument * -0.75,
+  ease: "none",
+});*/
+gsap.from(
+  "#star",
+
+  {
+    drawSVG: "0 0",
+    duration: 10,
+  }
+);

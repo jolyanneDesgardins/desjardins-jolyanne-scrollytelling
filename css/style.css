@@ -67,7 +67,7 @@ h1 {
 ************************************************************************************/
 section {
   width: 100%;
- border:red solid 1px;
+  border: red solid 1px;
   position: relative;
 }
 .arrow {
@@ -117,7 +117,6 @@ p.texte.chapitre-1.p2 {
   width: 75vw;
   font-family: "Lemon-juice";
 }
-
 
 /*Billy nage
 **********************************************************/
@@ -280,10 +279,9 @@ p.texte.chapitre-2.p2 {
 .medaillon {
   position: relative;
   width: 6vw;
-  top:45vh;
+  top: 45vh;
   z-index: 4;
   left: -20vw;
-
 }
 
 /*.coffre {
@@ -363,7 +361,6 @@ img {
 }
 
 div.texte.chapitre-3.p1 {
-
   position: absolute;
   font-size: 30px;
   top: 10%;
@@ -397,17 +394,20 @@ div.texte.chapitre-3.p2 {
 .billy-nage-chapitre4 {
   position: absolute;
   width: 52vw;
+  left: -10%;
 }
 .lola-chapitre4 {
   position: absolute;
   width: 52vw;
   top: 20%;
+  left: -10%;
 }
 div.texte.chapitre-4.p1 {
   position: absolute;
   font-size: 30px;
   top: 10%;
   width: 35vw;
+
   font-family: "Lemon-juice";
 }
 
@@ -597,6 +597,27 @@ div.texte.chapitre-5.p1 {
 .blue-nageoire {
   z-index: 2;
 }
+/*chapitre-7
+*************************************************************/
+#chapitre-7 {
+  width: 100vw;
+  height: 100vh;
+  max-width: 1920px;
+  background-image: url("../img/img_arriere_plan/background-espace.jpg");
+
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  box-sizing: border-box;
+  display: block;
+  position: relative;
+  overflow: hidden;
+}
+.cadran {
+  position: absolute;
+  top: 20vh;
+  left: 15vw;
+}
 /*Media Query
 ***********************************************************************************************/
 @media (max-width: 600px) {
@@ -681,6 +702,31 @@ div.texte.chapitre-5.p1 {
     bottom: -2vh;
   }
 }
+
+.bi-star-fill {
+  stroke: #ff003a;
+  stroke-width: 20px;
+  fill: #f50062;
+}
+.etoile {
+  position: absolute;
+  width: 25vw;
+  z-index: 10;
+} /*
+.etoile.no2 {
+  position: absolute;
+  left: 20vw;
+  width: 5vw;
+  top: 25vw;
+  z-index: 10;
+}
+.etoile.no3 {
+  position: absolute;
+  left: 50vw;
+  top: 25vw;
+  width: 5vw;
+  z-index: 10;
+}*/
 
 /* sprite Algue **
 *****************************************************************************************/
