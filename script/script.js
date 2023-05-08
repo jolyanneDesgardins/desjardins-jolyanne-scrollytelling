@@ -339,12 +339,29 @@ gsap.to("#etoilefull", {
 });
 gsap.registerPlugin(MotionPathPlugin);
 
-gsap.to("#etoileFillante", {
+gsap.to("#etoilefull", {
+  duration: 5, 
+  repeat: 12,
+  repeatDelay: 3,
+  yoyo: true,
+  ease: "power1.inOut",
+  motionPath:{
+    path: "#path",
+    align: "#path",
+    autoRotate: true,
+    alignOrigin: [0.5, 0.5]
+  }
+});
+
+
+/*gsap.to("#etoilefull", {
   motionPath: {
-    path: "#tracer",
-    align: "#tracer",
+    path: "#path",
+    align: "#path",
+    start:0,
+    end:1
   },
   duration: 4,
   repeat: -1,
   yoyo: true,
-});
+});*/
