@@ -802,3 +802,7 @@ div.texte.chapitre-5.p1 {
     background-position: 7200% 0;
   }
 }
+#etoileFillante {
+  position: absolute;
+  z-index: 7;
+}

@@ -231,9 +231,9 @@ let flashAnim = gsap
       trigger: "#chapitre-2",
     },
   })
-  .from(".coffre", { opacity: 0 })
-  .from(".flash", { scale: "0" }, "+=10")
 
+  .from(".flash", { scale: "0" }, "+=10")
+  .from(".coffre", { opacity: 0 })
   .to(".flash", { scale: "5", duration: "3" }, "+=4")
   .to(".flash", { scale: "0" })
   .to(".coffre", { opacity: 100 })
@@ -331,3 +331,20 @@ gsap.from(
     duration: 10,
   }
 );
+gsap.registerPlugin(MorphSVGPlugin);
+
+gsap.to("#etoilefull", {
+  morphSVG: "#etincelle",
+  duration: 3,
+});
+gsap.registerPlugin(MotionPathPlugin);
+
+gsap.to("#etoileFillante", {
+  motionPath: {
+    path: "#tracer",
+    align: "#tracer",
+  },
+  duration: 4,
+  repeat: -1,
+  yoyo: true,
+});
