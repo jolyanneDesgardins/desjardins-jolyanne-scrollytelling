@@ -12,3 +12,10 @@ J'ai changer tout les formats de mes images pour webp pour améliorer les perfor
 rajouter un texte alternatif aux images pour que mon site soit accessible aux personnes qui on un handicap.
 ### Action concrète pour résoudre le problème
 j'ai ajouté une petite description à chaque image pour qu'une personne qui utilise la commende vocal puisse quand même utiliser le site.
+## Problème no3
+### Minification
+enlever le code non nécessaire pour épurer le javascript
+### Action concrète pour résoudre le problème
+j'ai minifier mon javascript pour garder que je nécessaire pour améliorer les performance de mon site
+
+
