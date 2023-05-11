@@ -202,11 +202,7 @@ let mainZoom = gsap
   .to(".texte.chapitre-3.p1", { opacity: 100 })
   .from(".main-zoom", { opacity: 0, scale: "1" })
   .to(".main-zoom", { opacity: 0, scale: "1" })
-  .to(
-    ".main-zoom",
-    { scale: "3", duration: "3", y: "-50vh", x: "50vw" },
-    "+=4"
-  )
+  .to(".main-zoom", { scale: "3", duration: "3", y: "-50vh", x: "50vw" }, "+=4")
   .to(".main-zoom", { opacity: 100, scale: "1" })
   .to(".texte.chapitre-3.p2", { opacity: 100 })
   .to(".texte.chapitre-3.p1", { opacity: 0 });
@@ -218,23 +214,22 @@ let meduseAnim = gsap
   .timeline({
     scrollTrigger: {
       scrub: true,
- 
+
       markers: true,
       start: "center 60%",
       end: "center 20%",
       trigger: "#chapitre-5",
-      toggleActions: 'restart complete reverse',
+      toggleActions: "restart complete reverse",
     },
   })
 
   .from(".texte.chapitre-5.p1", { opacity: 100 })
-  .to(".texte.chapitre-5.p2", { opacity: 0})
+  .to(".texte.chapitre-5.p2", { opacity: 0 })
   .from(".meduse", { y: "30vh" })
 
   .to(".meduse", { y: "-95vh", ease: "none", duration: "3" })
   .to(".texte.chapitre-5.p1", { opacity: 0 })
-  .to(".texte.chapitre-5.p2", { opacity: 100});
-
+  .to(".texte.chapitre-5.p2", { opacity: 100 });
 
 let flashAnim = gsap
   .timeline({
@@ -248,7 +243,7 @@ let flashAnim = gsap
     },
   })
   .from(".coffre", { opacity: 0 })
-  .from(".flash", { scale: "0" }, )
+  .from(".flash", { scale: "0" })
   .to(".coffre", { opacity: 0 })
   .to(".flash", { scale: "5", duration: "3" }, "+=4")
   .to(".flash", { scale: "0" })
@@ -280,7 +275,6 @@ let flashAnim = gsap
 let largeurTotaleDuDocument = document.body.scrollWidth;
 gsap.to(".loin", {
   scrollTrigger: {
-    
     scrub: true,
     markers: true,
     trigger: "#chapitre-4",
@@ -348,28 +342,28 @@ gsap.from(
     duration: 10,
   }
 );
+
 gsap.registerPlugin(MorphSVGPlugin);
 
 gsap.to("#etoilefull", {
   morphSVG: "#etincelle",
-  duration: 3,
+  duration: 10,
 });
 gsap.registerPlugin(MotionPathPlugin);
 
-gsap.to("#etoilefull", {
-  duration: 5, 
+gsap.to("#etoile", {
+  duration: 5,
   repeat: 12,
   repeatDelay: 3,
   yoyo: true,
   ease: "power1.inOut",
-  motionPath:{
+  motionPath: {
     path: "#path",
     align: "#path",
     autoRotate: true,
-    alignOrigin: [0.5, 0.5]
-  }
+    alignOrigin: [0.5, 0.5],
+  },
 });
-
 
 /*gsap.to("#etoilefull", {
   motionPath: {

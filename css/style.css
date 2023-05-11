@@ -533,7 +533,7 @@ div.texte.chapitre-5.p1 {
   font-family: "Lemon-juice";
   z-index: 7;
 }
-div.texte.chapitre-5.p2{
+div.texte.chapitre-5.p2 {
   position: absolute;
   font-size: 30px;
   top: 10%;
@@ -565,6 +565,9 @@ div.texte.chapitre-5.p2{
   width: 12vw;
   top: 50%;
   left: 50%;
+}
+.etincelle {
+  visibility: hidden;
 }
 .soleil {
   position: absolute;
