@@ -306,33 +306,6 @@ gsap.to(".proche", {
   x: largeurTotaleDuDocument * 0.75,
   ease: "none",
 });
-/*
-gsap.to("#parallax-bg-1", {
-  scrollTrigger: {
-    scrub: true,
-    markers: true,
-  },
-  y: hauteurTotaleDuDocument * -0.25,
-  ease: "none",
-});
-
-gsap.to("#parallax-bg-2", {
-  scrollTrigger: {
-    scrub: true,
-    markers: true,
-  },
-  y: hauteurTotaleDuDocument * -0.4,
-  ease: "none",
-});
-
-gsap.to("#parallax-bg-3", {
-  scrollTrigger: {
-    scrub: true,
-    markers: true,
-  },
-  y: hauteurTotaleDuDocument * -0.75,
-  ease: "none",
-});*/
 
 gsap.from(
   "#star",
@@ -364,15 +337,3 @@ gsap.to("#etoile", {
     alignOrigin: [0.5, 0.5],
   },
 });
-
-/*gsap.to("#etoilefull", {
-  motionPath: {
-    path: "#path",
-    align: "#path",
-    start:0,
-    end:1
-  },
-  duration: 4,
-  repeat: -1,
-  yoyo: true,
-});*/
