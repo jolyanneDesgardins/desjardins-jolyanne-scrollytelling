@@ -251,26 +251,6 @@ let flashAnim = gsap
   .from(".coffre-haut", { y: "-5vh" })
   .to(".medaillon", { zIndex: 5 })
   .to(".coffre-haut", { y: "-25vh" });
-/* let coffre = gsap
-  .timeline()
-  .from(".coffre", {opacity:0},"+=5")
-  .to(".coffre", {opacity:100})
-*/
-/*let coffreHaut = gsap
-
-  .timeline({
-    scrollTrigger: {
-      scrub: true,
-      pin: true,
-      markers: true,
-      start: "center center",
-      end: "center 20%",
-      trigger: "#chapitre-2",
-    },
-  })
-  .from(".coffre-haut", { y: "-5vh" })
-  .to(".medaillon", { zIndex: 5 })
-  .to(".coffre-haut", { y: "-25vh" });*/
 
 let largeurTotaleDuDocument = document.body.scrollWidth;
 gsap.to(".loin", {
@@ -337,3 +317,18 @@ gsap.to("#etoile", {
     alignOrigin: [0.5, 0.5],
   },
 });
+let chapitre6 = gsap
+  .timeline({
+    scrollTrigger: {
+      scrub: true,
+      pin: true,
+      markers: true,
+      start: "center center",
+      end: "center 20%",
+      trigger: "#chapitre-6",
+    },
+  })
+  .from(".texte.chapitre-6.p1", { opacity: 100, duration: 6 })
+  .to(".texte.chapitre-6.p1", { opacity: 0 })
+  .from(".texte.chapitre-6.p2", { opacity: 0 })
+  .to(".texte.chapitre-6.p2", { opacity: 100 });

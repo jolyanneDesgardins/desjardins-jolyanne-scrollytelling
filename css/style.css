@@ -38,7 +38,7 @@ header {
   width: 100vw;
   height: 100vh;
   max-width: 1920px;
-  background-image: url("../img/img_arriere_plan/header.jpg");
+  background-image: url("../img/img_arriere_plan/header.webp");
   aspect-ratio: 16/9;
   background-size: cover;
   background-position: center;
@@ -83,7 +83,7 @@ section {
   width: 100vw;
   max-width: 1920px;
   height: 100vh;
-  background-image: url("../img/img_arriere_plan/background-eau.jpg");
+  background-image: url("../img/img_arriere_plan/background-eau.webp");
 
   background-size: cover;
   background-position: center;
@@ -216,7 +216,7 @@ transition-algue {
   width: 100vw;
   max-width: 1920px;
   height: 100vh;
-  background-image: url(../img/img_arriere_plan/background-eau.jpg);
+  background-image: url("../img/img_arriere_plan/background-eau.webp");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -314,7 +314,7 @@ p.texte.chapitre-2.p2 {
 #chapitre-3 {
   width: 100vw;
   height: 100vh;
-  background-image: url("../img/img_arriere_plan/background-eau.jpg");
+  background-image: url("../img/img_arriere_plan/background-eau.webp");
   max-width: 1920px;
   background-size: cover;
   background-position: center;
@@ -382,7 +382,7 @@ div.texte.chapitre-3.p2 {
   width: 100vw;
   height: 100vh;
   max-width: 1920px;
-  background-image: url("../img/img_arriere_plan/background-eau.jpg");
+  background-image: url("../img/img_arriere_plan/background-eau.webp");
 
   background-size: cover;
   background-position: center;
@@ -446,7 +446,7 @@ div.texte.chapitre-4.p1 {
   width: 100vw;
   height: 100vh;
   max-width: 1920px;
-  background-image: url("../img/img_arriere_plan/background-eau.jpg");
+  background-image: url("../img/img_arriere_plan/background-eau.webp");
 
   background-size: cover;
   background-position: center;
@@ -547,7 +547,7 @@ div.texte.chapitre-5.p2 {
   width: 100vw;
   height: 100vh;
   max-width: 1920px;
-  background-image: url("../img/img_arriere_plan/background-espace.jpg");
+  background-image: url("../img/img_arriere_plan/background-espace.webp");
 
   background-size: cover;
   background-position: center;
@@ -595,6 +595,22 @@ div.texte.chapitre-5.p2 {
   top: 30%;
 
   z-index: 6;
+}
+div.texte.chapitre-6.p1 {
+  position: absolute;
+  font-size: 30px;
+  top: 10%;
+  width: 35vw;
+  font-family: "Lemon-juice";
+  z-index: 7;
+}
+div.texte.chapitre-6.p2 {
+  position: absolute;
+  font-size: 30px;
+  top: 10%;
+  width: 35vw;
+  font-family: "Lemon-juice";
+  z-index: 7;
 }
 .chapitre-6.poisson {
   position: absolute;
