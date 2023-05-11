@@ -46,7 +46,7 @@ let bullePoisson = gsap
   })
   .from(".texte.chapitre-1.p2", { opacity: 0 })
   .from(".bulle-poisson", { x: "-100vw" }, "+=5")
-
+  .to(".texte.chapitre-1.p2", { opacity: 0 })
   .to(".bulle-poisson", { x: "75vw", ease: "none", duration: "5" }, "+=1.25")
   .to(".bulle-poisson", { opacity: 0 })
   .to(".texte.chapitre-1.p1", { opacity: 0 })
@@ -193,17 +193,17 @@ let mainZoom = gsap
       scrub: true,
       markers: true,
       pin: true,
-      start: "center center",
+      start: "center 50%",
       end: "center 20%",
       trigger: "#chapitre-3",
     },
   })
-  .to(".texte.chapitre-3.p2", { opacity: 0 })
-  .to(".texte.chapitre-3.p1", { opacity: 100 })
+  .from(".texte.chapitre-3.p1", { opacity: 100 })
+  .from(".texte.chapitre-3.p1", { opacity: 0 })
   .from(".main-zoom", { opacity: 0, scale: "1" })
+
+  .to(".main-zoom", { scale: "3", duration: "3", y: "-5vh" }, "+=4")
   .to(".main-zoom", { opacity: 0, scale: "1" })
-  .to(".main-zoom", { scale: "3", duration: "3", y: "-50vh", x: "50vw" }, "+=4")
-  .to(".main-zoom", { opacity: 100, scale: "1" })
   .to(".texte.chapitre-3.p2", { opacity: 100 })
   .to(".texte.chapitre-3.p1", { opacity: 0 });
 /*meduse ******/
@@ -225,9 +225,7 @@ let meduseAnim = gsap
 
   .from(".texte.chapitre-5.p1", { opacity: 100 })
   .to(".texte.chapitre-5.p2", { opacity: 0 })
-  .from(".meduse", { y: "30vh" })
 
-  .to(".meduse", { y: "-95vh", ease: "none", duration: "3" })
   .to(".texte.chapitre-5.p1", { opacity: 0 })
   .to(".texte.chapitre-5.p2", { opacity: 100 });
 
@@ -242,8 +240,12 @@ let flashAnim = gsap
       trigger: "#chapitre-2",
     },
   })
+  .from(".texte.chapitre-2.p2", { opacity: 0 })
   .from(".coffre", { opacity: 0 })
+
   .from(".flash", { scale: "0" })
+  .to(".texte.chapitre-2.p1", { opacity: 0 })
+  .to(".texte.chapitre-2.p2", { opacity: 100 })
   .to(".coffre", { opacity: 0 })
   .to(".flash", { scale: "5", duration: "3" }, "+=4")
   .to(".flash", { scale: "0" })

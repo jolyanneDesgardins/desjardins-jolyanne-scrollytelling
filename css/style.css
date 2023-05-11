@@ -8,6 +8,26 @@
   --mauve: #53175e;
   --mauve: #0ad88e;
 }
+ul.technique-gsap {
+  background: rgba(0, 0, 0, 0.3);
+  color: white;
+  font-size: 10px;
+  font-family: monospace;
+  font-weight: 400;
+  width: auto;
+  display: inline-block;
+  padding: 10px 20px 12px 20px;
+  margin: 0;
+  max-width: 300px;
+  position: absolute;
+  z-index: 1000;
+  top: 0;
+  right: 0;
+}
+
+ul.technique-gsap li {
+  margin: 5px 0;
+}
 /*Typo
 **********************************************/
 
@@ -228,7 +248,7 @@ p.texte.chapitre-2.p1 {
   position: absolute;
   font-size: 30px;
   top: 10%;
-  left: 50vw;
+  margin: 1vw;
   width: 25vw;
   font-family: "Lemon-juice";
 }
@@ -236,6 +256,7 @@ p.texte.chapitre-2.p2 {
   position: absolute;
   font-size: 30px;
   top: 10%;
+  margin: 1vw;
   width: 35vw;
   font-family: "Lemon-juice";
 }
@@ -365,6 +386,7 @@ div.texte.chapitre-3.p1 {
   font-size: 30px;
   top: 10%;
   width: 35vw;
+  margin: 1vw;
   font-family: "Lemon-juice";
 }
 div.texte.chapitre-3.p2 {
@@ -372,6 +394,7 @@ div.texte.chapitre-3.p2 {
   font-size: 30px;
   top: 10%;
   width: 35vw;
+  margin: 1vw;
   opacity: 0;
   font-family: "Lemon-juice";
 }
@@ -407,7 +430,7 @@ div.texte.chapitre-4.p1 {
   font-size: 30px;
   top: 10%;
   width: 35vw;
-
+  margin: 1vw;
   font-family: "Lemon-juice";
 }
 
@@ -532,6 +555,7 @@ div.texte.chapitre-5.p1 {
   width: 35vw;
   font-family: "Lemon-juice";
   z-index: 7;
+  margin: 1vw;
 }
 div.texte.chapitre-5.p2 {
   position: absolute;
@@ -540,6 +564,7 @@ div.texte.chapitre-5.p2 {
   width: 35vw;
   font-family: "Lemon-juice";
   z-index: 7;
+  margin: 1vw;
 }
 /* Chapitre 6
 *****************************************************************************************************/
@@ -557,8 +582,10 @@ div.texte.chapitre-5.p2 {
   position: relative;
   overflow: hidden;
 }
-#etoile {
+.etoile.no2 {
   position: absolute;
+  left: 25vw;
+  top: 35vh;
 }
 .mercure {
   position: absolute;
@@ -571,6 +598,11 @@ div.texte.chapitre-5.p2 {
 }
 #path {
   visibility: hidden;
+}
+#ligne {
+  position: absolute;
+  top: -15vh;
+  left: 35vw;
 }
 
 .soleil {
@@ -603,6 +635,7 @@ div.texte.chapitre-6.p1 {
   width: 35vw;
   font-family: "Lemon-juice";
   z-index: 7;
+  margin: 1vw;
 }
 div.texte.chapitre-6.p2 {
   position: absolute;
@@ -619,6 +652,7 @@ div.texte.chapitre-6.p2 {
   left: 35%;
   top: 25%;
   z-index: 7;
+  margin: 1vw;
 }
 
 .blue-corps {
