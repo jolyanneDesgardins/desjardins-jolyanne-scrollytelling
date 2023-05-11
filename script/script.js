@@ -204,7 +204,7 @@ let mainZoom = gsap
   .to(".main-zoom", { opacity: 0, scale: "1" })
   .to(
     ".main-zoom",
-    { scale: "3", duration: "3", y: "-105vh", x: "50vw" },
+    { scale: "3", duration: "3", y: "-50vh", x: "50vw" },
     "+=4"
   )
   .to(".main-zoom", { opacity: 100, scale: "1" })
@@ -215,13 +215,26 @@ let mainZoom = gsap
 const meduse = document.querySelector(".lola-chapitre4");
 
 let meduseAnim = gsap
-  .timeline()
+  .timeline({
+    scrollTrigger: {
+      scrub: true,
+ 
+      markers: true,
+      start: "center 60%",
+      end: "center 20%",
+      trigger: "#chapitre-5",
+      toggleActions: 'restart complete reverse',
+    },
+  })
 
+  .from(".texte.chapitre-5.p1", { opacity: 100 })
+  .to(".texte.chapitre-5.p2", { opacity: 0})
   .from(".meduse", { y: "30vh" })
 
-  .to(".meduse", { y: "-95vh", ease: "none", duration: "3" }, "+=1.25");
+  .to(".meduse", { y: "-95vh", ease: "none", duration: "3" })
+  .to(".texte.chapitre-5.p1", { opacity: 0 })
+  .to(".texte.chapitre-5.p2", { opacity: 100});
 
-const flash = document.querySelector(".flash");
 
 let flashAnim = gsap
   .timeline({
@@ -267,6 +280,7 @@ let flashAnim = gsap
 let largeurTotaleDuDocument = document.body.scrollWidth;
 gsap.to(".loin", {
   scrollTrigger: {
+    
     scrub: true,
     markers: true,
     trigger: "#chapitre-4",
