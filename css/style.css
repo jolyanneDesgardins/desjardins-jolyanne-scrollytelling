@@ -22,7 +22,7 @@ ul.technique-gsap {
   position: absolute;
   z-index: 1000;
   top: 0;
-  right: 0;
+  left: 0;
 }
 
 ul.technique-gsap li {
@@ -32,7 +32,7 @@ ul.technique-gsap li {
 **********************************************/
 
 @font-face {
-  src: url("../fonnt/Geosanslight.ttf") format("truetype");
+  src: url("../font/GeosansLight.ttf") format("truetype");
   font-family: "Lemon-juice";
 }
 @font-face {
@@ -662,17 +662,19 @@ div.texte.chapitre-6.p2 {
 .blue-nageoire {
   z-index: 2;
 }
-div.texte.chapitre-5.p1 {
+div.texte.chapitre-6.p1 {
   position: absolute;
   font-size: 30px;
   top: 10%;
   width: 35vw;
   font-family: "Lemon-juice";
   z-index: 7;
+  color: antiquewhite;
 }
-div.texte.chapitre-5.p2 {
+div.texte.chapitre-6.p2 {
   position: absolute;
   font-size: 30px;
+  color: antiquewhite;
   top: 10%;
   width: 35vw;
   font-family: "Lemon-juice";
@@ -887,4 +889,9 @@ div.texte.chapitre-5.p2 {
   position: absolute;
   z-index: 7;
   width: 5vw;
+}
+#morph{
+  position: absolute;
+  top:25h;
+  left:50vw;
 }
