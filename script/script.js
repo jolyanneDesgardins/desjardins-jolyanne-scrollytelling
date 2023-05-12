@@ -67,7 +67,7 @@ let billynageAnim = gsap
   .timeline({
     scrollTrigger: {
       scrub: !0,
-      markers: !0,
+     
       start: "center center",
       end: "center 20%",
       trigger: "#chapitre-4",
