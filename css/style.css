@@ -32,7 +32,7 @@ ul.technique-gsap li {
 **********************************************/
 
 @font-face {
-  src: url("../font/LemonJuice.otf") format("opentype");
+  src: url("../fonnt/Geosanslight.ttf") format("truetype");
   font-family: "Lemon-juice";
 }
 @font-face {
