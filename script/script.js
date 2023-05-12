@@ -1,4 +1,4 @@
-gsap.registerPlugin(ScrollTrigger), gsap.registerPlugin(DrawSVGPlugin);
+gsap.registerPlugin(ScrollTrigger)/*gsap.registerPlugin(DrawSVGPlugin);*/
 const arrow = document.querySelector(".arrow");
 let anim = gsap.from(".arrow", {
   duration: 1,
@@ -67,7 +67,7 @@ let billynageAnim = gsap
   .timeline({
     scrollTrigger: {
       scrub: !0,
-      markers: !0,
+  
       start: "center center",
       end: "center 20%",
       trigger: "#chapitre-4",
@@ -84,7 +84,7 @@ let lolaNage = gsap
   .timeline({
     scrollTrigger: {
       scrub: !0,
-      markers: !0,
+ 
       start: "center center",
       end: "center 20%",
       trigger: "#chapitre-4",
@@ -97,7 +97,7 @@ let mainZoom = gsap
   .timeline({
     scrollTrigger: {
       scrub: !0,
-      markers: !0,
+  
       pin: !0,
       start: "center 50%",
       end: "center 20%",
@@ -116,7 +116,7 @@ let meduseAnim = gsap
     .timeline({
       scrollTrigger: {
         scrub: !0,
-        markers: !0,
+       
         start: "center 60%",
         end: "center 20%",
         trigger: "#chapitre-5",
@@ -132,7 +132,7 @@ let meduseAnim = gsap
       scrollTrigger: {
         scrub: !0,
         pin: !0,
-        markers: !0,
+      
         start: "center center",
         end: "center 20%",
         trigger: "#chapitre-2",
@@ -152,24 +152,25 @@ let meduseAnim = gsap
     .to(".coffre-haut", { y: "-25vh" }),
   largeurTotaleDuDocument = document.body.scrollWidth;
 gsap.to(".loin", {
-  scrollTrigger: { scrub: !0, markers: !0, trigger: "#chapitre-4" },
+  scrollTrigger: { scrub: !0, trigger: "#chapitre-4" },
   x: -0.25 * largeurTotaleDuDocument,
   ease: "none",
 }),
   gsap.to(".moyen", {
-    scrollTrigger: { scrub: !0, markers: !0, trigger: "#chapitre-4" },
+    scrollTrigger: { scrub: !0,  trigger: "#chapitre-4" },
     x: 0.4 * largeurTotaleDuDocument,
     ease: "none",
   }),
   gsap.to(".proche", {
-    scrollTrigger: { scrub: !0, markers: !0, pin: !0, trigger: "#chapitre-4" },
+    scrollTrigger: { scrub: !0,  pin: !0, trigger: "#chapitre-4" },
     x: "25vw",
     x: 0.75 * largeurTotaleDuDocument,
     ease: "none",
   }),
+  /*
   gsap.from("#star", { drawSVG: "0 0", duration: 10 }),
-  gsap.registerPlugin(MorphSVGPlugin),
-  gsap.to("#etoilefull", { morphSVG: "#etincelle", duration: 10 }),
+  /*gsap.registerPlugin(MorphSVGPlugin),*/
+  /*gsap.to("#etoilefull", { morphSVG: "#etincelle", duration: 10 }),*/
   gsap.registerPlugin(MotionPathPlugin),
   gsap.to("#etoile", {
     duration: 5,
@@ -189,7 +190,7 @@ let chapitre6 = gsap
     scrollTrigger: {
       scrub: !0,
       pin: !0,
-      markers: !0,
+
       start: "center center",
       end: "center 20%",
       trigger: "#chapitre-6",
